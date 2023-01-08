@@ -15,11 +15,11 @@ endfunction
 function! SetLogColor()
     hi clear
 
-    call hlset([#{name : "logLevel", guibg : "Cyan"}])
-    call hlset([#{name : "logErrorStatement", guifg : "Red"}])
-    call hlset([#{name : "logWarnStatement", guifg : "Yellow"}])
-    call hlset([#{name : "logInfoStatement", guifg : "White"}])
-    call hlset([#{name : "logDebugStatement", guifg : "Green"}])
+    call hlset([{"name" : "logLevel", "ctermfg" : "Blue", "guifg" : "Blue"}])
+    call hlset([{"name" : "logErrorStatement", "ctermfg" : "Red", "guifg" : "Red"}])
+    call hlset([{"name" : "logWarnStatement", "ctermfg" : "Yellow", "guifg" : "Yellow"}])
+    call hlset([{"name" : "logInfoStatement", "ctermfg" : "White", "guifg" : "White"}])
+    call hlset([{"name" : "logDebugStatement", "ctermfg" : "Green",  "guifg" : "Green"}])
 
 	if prop_type_get("logLevel")->len() <= 0
    		call prop_type_add("logLevel", {"highlight" : "logLevel"})
